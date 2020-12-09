@@ -8,5 +8,5 @@ fi
 
 cp /regexes.json .
 /usr/local/bin/trufflehog ${args} . |tee > logs.txt
-echo "::set-output name=output::$(cat logs.txt)"
+echo "::set-output name=result::$(cat logs.txt)"
 echo "::set-output name=status_code::0"
