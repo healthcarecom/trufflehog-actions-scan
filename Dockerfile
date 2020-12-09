@@ -1,6 +1,6 @@
 FROM python:3.7-alpine
 
-LABEL repository="https://github.com/UnicornGlobal/trufflehog-actions-scan"
+LABEL repository="https://github.com/healthcarecom/trufflehog-actions-scan"
 LABEL homepage="https://github.com/actions"
 
 RUN apk add --no-cache git less
