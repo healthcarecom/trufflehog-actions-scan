@@ -8,6 +8,6 @@ fi
 
 cp /regexes.json .
 /usr/local/bin/trufflehog ${args} . |tee > logs.txt
-status_code=$(echo ${PIPESTATUS[0]})
+#status_code=$(echo ${PIPESTATUS[0]})
 echo "::set-output name=result::$(cat logs.txt)"
-echo "::set-output name=status_code::$status_code"
+#echo "::set-output name=status_code::$status_code"
