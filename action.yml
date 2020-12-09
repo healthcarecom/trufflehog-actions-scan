@@ -7,6 +7,11 @@ inputs:
   branch:
     description: 'Branch to run the check on'
     required: false
+outputs:
+  result:
+    description: 'Return scan results'
+  status_code:
+    description: '1 if secrets found, 0 otherwise'
 branding:
   icon: 'lock'
   color: 'orange'
