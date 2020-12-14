@@ -8,7 +8,8 @@ fi
 
 cp /regexes.json .
 /usr/local/bin/trufflehog ${args} . > logs.txt
-sed -i -r 's/\[[0-9]//' logs.txt #Removing bash color sequences
+#https://unix.stackexchange.com/questions/14684/removing-control-chars-including-console-codes-colours-from-script-output
+sed -i -e "s/\x1b\[.\{1,5\}m//g" logs.txt #Removing bash color sequences
 #status_code=$(echo ${PIPESTATUS[0]})
 echo "::set-output name=result::$(cat logs.txt)"
 #echo "::set-output name=status_code::$status_code"
